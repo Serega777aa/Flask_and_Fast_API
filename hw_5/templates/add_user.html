@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ super() }} - Добавить пользователя
+{% endblock %}
+
+{% block content %}
+<form action="/user/post_add/" enctype=multipart/form-data method="post">
+    <input type="number" placeholder="id" name="id_"><br><br>
+    <input type="text" placeholder="name" name="name"><br><br>
+    <input type="email" placeholder="e-mail" name="email"><br><br>
+    <input type="password" placeholder="password" name="password"><br><br>
+    <input type="submit">
+</form>
+{% endblock %}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        Главная
+        {% endblock %}
+    </title>
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="/">Главная</a></li>
+        <li><a href="/users/">Список пользователей</a></li>
+        <!-- <li><a href="/user/get_add/">Добавить пользователя</a></li> -->
+    </ul>
+</nav>
+<main>
+    {% block content %}
+    Страница не заполнена
+    {% endblock %}
+</main>
+</body>
+</html>

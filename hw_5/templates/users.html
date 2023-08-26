@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ super() }} - Список пользователей
+{% endblock %}
+
+{% block content %}
+<table>
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>имя</th>
+        <th>e-mail</th>
+        <th>пароль</th>
+    </tr>
+    </thead>
+    {% for user in users %}
+    <tr>
+        <td>{{ user.id_ }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.password }}</td>
+    </tr>
+    {% endfor %}
+</table><br>
+<button><a href="/user/get_add/">Добавить пользователя</a></button>
+{% endblock %}
